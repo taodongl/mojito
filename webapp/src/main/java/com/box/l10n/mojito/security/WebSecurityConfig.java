@@ -5,7 +5,7 @@ import com.box.l10n.mojito.service.security.user.UserService;
 import com.google.common.base.Preconditions;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.Filter;
+import jakarta.servlet.Filter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

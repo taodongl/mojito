@@ -30,7 +30,7 @@ import com.ibm.icu.text.PluralRules;
 import com.ibm.icu.util.ULocale;
 import java.util.Map;
 import java.util.function.ToLongFunction;
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

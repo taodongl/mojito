@@ -4,8 +4,8 @@ import com.github.pnowy.nc.core.NativeQuery;
 import com.github.pnowy.nc.core.QueryInfo;
 import java.util.Collection;
 import java.util.List;
-import javax.persistence.Query;
-import javax.persistence.TemporalType;
+import jakarta.persistence.Query;
+import jakarta.persistence.TemporalType;
 import org.joda.time.DateTime;
 
 /** @author jeanaurambault */

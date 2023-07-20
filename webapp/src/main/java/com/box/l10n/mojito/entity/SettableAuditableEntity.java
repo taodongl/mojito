@@ -2,9 +2,9 @@ package com.box.l10n.mojito.entity;
 
 import com.box.l10n.mojito.rest.View;
 import com.fasterxml.jackson.annotation.JsonView;
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.PrePersist;
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.PrePersist;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
