@@ -7,7 +7,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
 import org.hibernate.annotations.JavaType;
-import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 /**

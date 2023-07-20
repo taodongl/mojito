@@ -44,7 +44,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 public class TextUnitBatchImporterServiceTest extends ServiceTestBase {
 
   /** logger */
@@ -339,8 +341,11 @@ public class TextUnitBatchImporterServiceTest extends ServiceTestBase {
 
   @Test
   public void testUnused()
-      throws InterruptedException, RepositoryNameAlreadyUsedException,
-          RepositoryLocaleCreationException, VirtualAssetBadRequestException, ExecutionException {
+      throws InterruptedException,
+          RepositoryNameAlreadyUsedException,
+          RepositoryLocaleCreationException,
+          VirtualAssetBadRequestException,
+          ExecutionException {
     Repository repository =
         repositoryService.createRepository(testIdWatcher.getEntityName("testUnused"));
     RepositoryLocale repositoryLocaleFrFR =

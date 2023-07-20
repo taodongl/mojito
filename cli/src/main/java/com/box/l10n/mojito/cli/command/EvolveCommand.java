@@ -29,7 +29,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 @Component
 @Scope("prototype")
 @Parameters(
@@ -46,6 +48,7 @@ public class EvolveCommand extends Command {
           "extractAllPairs=false",
           "exceptions=_fields/.*/value",
           UUID.randomUUID().toString());
+
   /** logger */
   static Logger logger = LoggerFactory.getLogger(EvolveCommand.class);
 

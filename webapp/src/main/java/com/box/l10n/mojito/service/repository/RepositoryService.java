@@ -85,8 +85,8 @@ public class RepositoryService {
    * query.distinct(true); query.select(root); query.orderBy(toOrders(sort, root, builder));
    * EntityGraph entityGraph = entityManager.getEntityGraph("repository-view-summary");
    * TypedQuery<Repository> typedQuery = entityManager.createQuery(query);
-   * typedQuery.setHint("jakarta.persistence.loadgraph", entityGraph); List<Repository> repositories =
-   * typedQuery.getResultList(); return repositories;
+   * typedQuery.setHint("jakarta.persistence.loadgraph", entityGraph); List<Repository> repositories
+   * = typedQuery.getResultList(); return repositories;
    *
    * @param repositoryName
    * @return

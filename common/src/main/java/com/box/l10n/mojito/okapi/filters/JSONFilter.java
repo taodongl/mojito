@@ -23,7 +23,9 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 public class JSONFilter extends net.sf.okapi.filters.json.JSONFilter {
 
   /** logger */
@@ -33,11 +35,13 @@ public class JSONFilter extends net.sf.okapi.filters.json.JSONFilter {
 
   Pattern noteKeyPattern = null;
   Pattern usagesKeyPattern = null;
+
   /**
    * To keep the usage until a new one is found. When false it will reset the usages when the text
    * unit/object end is reached.
    */
   boolean usagesKeepOrReplace = false;
+
   /**
    * To keep the note until a new one is found. When false it will reset the usages when the text
    * unit/object end is reached.

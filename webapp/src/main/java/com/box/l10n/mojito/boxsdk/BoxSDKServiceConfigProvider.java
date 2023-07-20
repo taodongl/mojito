@@ -4,7 +4,9 @@ import com.box.l10n.mojito.service.boxsdk.BoxSDKServiceConfigEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/** @author wyau */
+/**
+ * @author wyau
+ */
 @Component
 public class BoxSDKServiceConfigProvider {
 

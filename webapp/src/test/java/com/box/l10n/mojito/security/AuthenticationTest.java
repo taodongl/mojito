@@ -4,8 +4,8 @@ import com.box.l10n.mojito.rest.WSTestBase;
 import com.box.l10n.mojito.rest.resttemplate.CredentialProvider;
 import com.box.l10n.mojito.rest.resttemplate.FormLoginAuthenticationCsrfTokenInterceptor;
 import java.io.IOException;
+import org.apache.hc.client5.http.cookie.CookieStore;
 import org.apache.http.HttpStatus;
-import org.apache.http.client.CookieStore;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.web.authentication.session.SessionAuthenticationException;
 
-/** @author wyau */
+/**
+ * @author wyau
+ */
 public class AuthenticationTest extends WSTestBase {
 
   /** logger */

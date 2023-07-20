@@ -4,7 +4,9 @@ import org.joda.time.Period;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 @Configuration
 @ConfigurationProperties(prefix = "l10n.sla-checker.email")
 public class SlaCheckerEmailConfig {

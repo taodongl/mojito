@@ -5,7 +5,9 @@ import com.github.pnowy.nc.core.expressions.NativeExp;
 import com.github.pnowy.nc.utils.Strings;
 import org.joda.time.DateTime;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 public class NativeDateGteExp implements NativeExp {
   /** Column name. */
   private String columnName;

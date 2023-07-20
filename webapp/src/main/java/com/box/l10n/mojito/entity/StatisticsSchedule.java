@@ -9,7 +9,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.JavaType;
-import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 /**

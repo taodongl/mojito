@@ -33,7 +33,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 public class LeveragingServiceTest extends ServiceTestBase {
 
   /** logger */
@@ -55,8 +57,11 @@ public class LeveragingServiceTest extends ServiceTestBase {
 
   @Test
   public void copyAllTranslationsWithMD5MatchBetweenRepositories()
-      throws InterruptedException, ExecutionException, RepositoryNameAlreadyUsedException,
-          AssetWithIdNotFoundException, RepositoryWithIdNotFoundException {
+      throws InterruptedException,
+          ExecutionException,
+          RepositoryNameAlreadyUsedException,
+          AssetWithIdNotFoundException,
+          RepositoryWithIdNotFoundException {
 
     TMTestData tmTestDataSource = new TMTestData(testIdWatcher);
 
@@ -113,8 +118,11 @@ public class LeveragingServiceTest extends ServiceTestBase {
 
   @Test
   public void copyAllTranslationsWithMD5MatchBetweenRepositoriesNameRegex()
-      throws InterruptedException, ExecutionException, RepositoryNameAlreadyUsedException,
-          AssetWithIdNotFoundException, RepositoryWithIdNotFoundException {
+      throws InterruptedException,
+          ExecutionException,
+          RepositoryNameAlreadyUsedException,
+          AssetWithIdNotFoundException,
+          RepositoryWithIdNotFoundException {
 
     TMTestData tmTestDataSource = new TMTestData(testIdWatcher);
 
@@ -182,8 +190,11 @@ public class LeveragingServiceTest extends ServiceTestBase {
 
   @Test
   public void copyTranslationForTmTextUnitMapping()
-      throws InterruptedException, ExecutionException, RepositoryNameAlreadyUsedException,
-          AssetWithIdNotFoundException, RepositoryWithIdNotFoundException {
+      throws InterruptedException,
+          ExecutionException,
+          RepositoryNameAlreadyUsedException,
+          AssetWithIdNotFoundException,
+          RepositoryWithIdNotFoundException {
 
     TMTestData tmTestDataSource = new TMTestData(testIdWatcher);
 
@@ -255,8 +266,11 @@ public class LeveragingServiceTest extends ServiceTestBase {
 
   @Test
   public void copyAllTranslationsWithExactMatchBetweenRepositories()
-      throws InterruptedException, ExecutionException, RepositoryNameAlreadyUsedException,
-          AssetWithIdNotFoundException, RepositoryWithIdNotFoundException {
+      throws InterruptedException,
+          ExecutionException,
+          RepositoryNameAlreadyUsedException,
+          AssetWithIdNotFoundException,
+          RepositoryWithIdNotFoundException {
 
     TMTestData tmTestDataSource = new TMTestData(testIdWatcher);
 
@@ -314,8 +328,11 @@ public class LeveragingServiceTest extends ServiceTestBase {
 
   @Test
   public void checkCommentsAreNotCopiedIfTmTextUnitCurrentVariantNotChanged()
-      throws InterruptedException, ExecutionException, RepositoryNameAlreadyUsedException,
-          AssetWithIdNotFoundException, RepositoryWithIdNotFoundException {
+      throws InterruptedException,
+          ExecutionException,
+          RepositoryNameAlreadyUsedException,
+          AssetWithIdNotFoundException,
+          RepositoryWithIdNotFoundException {
 
     TMTestData tmTestDataSource = new TMTestData(testIdWatcher);
 
@@ -359,8 +376,11 @@ public class LeveragingServiceTest extends ServiceTestBase {
 
   @Test
   public void copyBetweenAssets()
-      throws InterruptedException, ExecutionException, RepositoryNameAlreadyUsedException,
-          RepositoryLocaleCreationException, AssetWithIdNotFoundException,
+      throws InterruptedException,
+          ExecutionException,
+          RepositoryNameAlreadyUsedException,
+          RepositoryLocaleCreationException,
+          AssetWithIdNotFoundException,
           RepositoryWithIdNotFoundException {
 
     Locale frFR = localeService.findByBcp47Tag("fr-FR");

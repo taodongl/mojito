@@ -6,7 +6,9 @@ import static org.junit.Assert.assertNotNull;
 import org.joda.time.LocalTime;
 import org.junit.Test;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 public class LocalTimeConverterTest {
 
   @Test

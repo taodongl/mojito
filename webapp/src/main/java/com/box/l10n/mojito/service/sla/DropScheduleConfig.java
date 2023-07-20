@@ -7,7 +7,9 @@ import org.joda.time.LocalTime;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 @Configuration
 @ConfigurationProperties(prefix = "l10n.drop-schedule")
 public class DropScheduleConfig {

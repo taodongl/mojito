@@ -11,7 +11,9 @@ import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 public class DropSpecification {
 
   /**

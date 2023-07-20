@@ -60,12 +60,12 @@ import com.ibm.icu.text.MessageFormat;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.Timer;
+import jakarta.persistence.EntityManager;
 import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import jakarta.persistence.EntityManager;
 import net.sf.okapi.common.LocaleId;
 import net.sf.okapi.common.exceptions.OkapiBadFilterInputException;
 import net.sf.okapi.common.filters.IFilterConfigurationMapper;
@@ -922,7 +922,9 @@ public class TMService {
     return updateReport;
   }
 
-  /** @return A {@code QualityCheckStep} that will only perform the needed checks */
+  /**
+   * @return A {@code QualityCheckStep} that will only perform the needed checks
+   */
   private QualityCheckStep getConfiguredQualityStep() {
 
     Parameters parameters = new Parameters();

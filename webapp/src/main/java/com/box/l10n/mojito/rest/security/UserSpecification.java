@@ -9,7 +9,9 @@ import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
 
-/** @author jyi */
+/**
+ * @author jyi
+ */
 public class UserSpecification {
   /**
    * A {@link Specification} that checks if {@link User#username} is equal

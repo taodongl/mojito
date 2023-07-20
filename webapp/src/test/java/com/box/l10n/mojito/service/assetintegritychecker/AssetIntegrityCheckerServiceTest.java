@@ -31,7 +31,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/** @author wyau */
+/**
+ * @author wyau
+ */
 public class AssetIntegrityCheckerServiceTest extends ServiceTestBase {
 
   @Autowired RepositoryService repositoryService;
@@ -55,8 +57,11 @@ public class AssetIntegrityCheckerServiceTest extends ServiceTestBase {
 
   @Test
   public void testIntegrityCheckerIsUsedInTmServiceUpdate()
-      throws RepositoryLocaleCreationException, ExecutionException, InterruptedException,
-          RepositoryNameAlreadyUsedException, AssetUpdateException,
+      throws RepositoryLocaleCreationException,
+          ExecutionException,
+          InterruptedException,
+          RepositoryNameAlreadyUsedException,
+          AssetUpdateException,
           UnsupportedAssetFilterTypeException {
     Repository repository =
         repositoryService.createRepository(testIdWatcher.getEntityName("repository"));

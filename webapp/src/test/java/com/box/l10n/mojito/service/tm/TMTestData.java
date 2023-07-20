@@ -20,9 +20,9 @@ import com.box.l10n.mojito.service.repository.RepositoryLocaleRepository;
 import com.box.l10n.mojito.service.repository.RepositoryService;
 import com.box.l10n.mojito.test.TestIdWatcher;
 import com.google.common.collect.ImmutableMap;
+import jakarta.annotation.PostConstruct;
 import java.util.function.Function;
 import java.util.stream.Stream;
-import jakarta.annotation.PostConstruct;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +30,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.transaction.annotation.Transactional;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 @Configurable
 public class TMTestData {
 

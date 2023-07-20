@@ -27,15 +27,14 @@
         <maven.release.version>3.0.1</maven.release.version>
         <okapi.version>0.36</okapi.version>
         <guava.version>29.0-jre</guava.version>
-        <hibernate.joda-time.version>1.4</hibernate.joda-time.version>
-        <usertype.core.version>6.0.1.GA</usertype.core.version>
+<!--        <hibernate.joda-time.version>1.4</hibernate.joda-time.version>-->
+<!--        <usertype.core.version>6.0.1.GA</usertype.core.version>-->
         <aspectj-maven-plugin.version>1.13.1</aspectj-maven-plugin.version>
         <!-- org.codehaus.mojo doesn't support Java 8+, use fork for now though it seems a new release is comming soon -->
         <aspectj-maven-plugin.group-id>dev.aspectj</aspectj-maven-plugin.group-id>
         <auto-value.version>1.7.4</auto-value.version>
         <immutables-value.version>2.9.2</immutables-value.version>
-        <!-- google-java-format 1.7 is the last version that supports JVM 8 -->
-        <plugin.version.google-java-format>1.7</plugin.version.google-java-format>
+        <plugin.version.google-java-format>1.17.0</plugin.version.google-java-format>
         <jjwt.version>0.10.5</jjwt.version>
         <github.api.version>1.313</github.api.version>
     </properties>
@@ -120,7 +119,7 @@
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>2.24.1</version>
+                <version>2.37.0</version>
                 <executions>
                     <execution>
                         <goals>

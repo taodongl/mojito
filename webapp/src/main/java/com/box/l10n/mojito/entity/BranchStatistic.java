@@ -3,11 +3,13 @@ package com.box.l10n.mojito.entity;
 import com.box.l10n.mojito.rest.View;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-import jakarta.persistence.*;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 @Entity
 @Table(
     name = "branch_statistic",

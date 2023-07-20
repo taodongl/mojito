@@ -30,7 +30,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.HttpClientErrorException;
 
-/** @author wyau */
+/**
+ * @author wyau
+ */
 public class RepositoryWSTest extends WSTestBase {
 
   /** logger */
@@ -97,8 +99,10 @@ public class RepositoryWSTest extends WSTestBase {
 
   @Test
   public void testUpdateRepositoryNameAndDescription()
-      throws RepositoryNotFoundException, ResourceNotCreatedException,
-          RepositoryNameAlreadyUsedException, ResourceNotUpdatedException {
+      throws RepositoryNotFoundException,
+          ResourceNotCreatedException,
+          RepositoryNameAlreadyUsedException,
+          ResourceNotUpdatedException {
     Repository expectedRepository = wsTestDataFactory.createRepository(testIdWatcher);
 
     String newName = expectedRepository.getName() + "_updated";
@@ -134,7 +138,8 @@ public class RepositoryWSTest extends WSTestBase {
 
   @Test
   public void testUpdateRepositoryLocales()
-      throws RepositoryNotFoundException, RepositoryNameAlreadyUsedException,
+      throws RepositoryNotFoundException,
+          RepositoryNameAlreadyUsedException,
           ResourceNotUpdatedException {
     Repository expectedRepository = wsTestDataFactory.createRepository(testIdWatcher);
 

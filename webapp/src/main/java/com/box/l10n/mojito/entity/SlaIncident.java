@@ -1,7 +1,5 @@
 package com.box.l10n.mojito.entity;
 
-import java.util.Set;
-
 import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,11 +9,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.Set;
 import org.hibernate.annotations.JavaType;
-import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 @Entity
 @Table(name = "sla_incident")
 public class SlaIncident extends AuditableEntity {

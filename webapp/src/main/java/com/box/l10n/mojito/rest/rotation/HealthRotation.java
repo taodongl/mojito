@@ -1,10 +1,10 @@
 package com.box.l10n.mojito.rest.rotation;
 
+import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.actuate.health.Health;
@@ -13,7 +13,9 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 @Component
 public class HealthRotation implements HealthIndicator {
 

@@ -11,7 +11,9 @@ import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.JavaType;
 import org.joda.time.DateTime;
 
-/** @author garion */
+/**
+ * @author garion
+ */
 @Entity
 @Table(
     name = "commit",

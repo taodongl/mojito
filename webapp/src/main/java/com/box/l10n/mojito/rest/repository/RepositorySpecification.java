@@ -9,7 +9,9 @@ import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
 
-/** @author aloison */
+/**
+ * @author aloison
+ */
 public class RepositorySpecification {
 
   /**

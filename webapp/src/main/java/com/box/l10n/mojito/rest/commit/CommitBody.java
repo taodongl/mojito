@@ -3,7 +3,9 @@ package com.box.l10n.mojito.rest.commit;
 import com.box.l10n.mojito.entity.Repository;
 import org.joda.time.DateTime;
 
-/** @author garion */
+/**
+ * @author garion
+ */
 public class CommitBody {
   /** {@link Repository#id} */
   Long repositoryId;

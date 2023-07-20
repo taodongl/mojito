@@ -6,7 +6,9 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import org.joda.time.DateTime;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PollableTask {
 

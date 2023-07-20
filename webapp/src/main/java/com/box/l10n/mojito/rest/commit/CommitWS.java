@@ -27,7 +27,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/** @author garion */
+/**
+ * @author garion
+ */
 @RestController
 public class CommitWS {
 
@@ -207,7 +209,8 @@ public class CommitWS {
    */
   @RequestMapping(value = "/api/commits/pushRun", method = RequestMethod.POST)
   public void associateCommitToPushRun(@RequestBody CommitToPushRunBody commitToPushRunBody)
-      throws RepositoryWithIdNotFoundException, PushRunWithNameNotFoundException,
+      throws RepositoryWithIdNotFoundException,
+          PushRunWithNameNotFoundException,
           CommitWithNameNotFoundException {
     commitService.associateCommitToPushRun(
         commitToPushRunBody.getRepositoryId(),
@@ -227,7 +230,8 @@ public class CommitWS {
    */
   @RequestMapping(value = "/api/commits/pullRun", method = RequestMethod.POST)
   public void associateCommitToPullRun(@RequestBody CommitToPullRunBody commitToPullRunBody)
-      throws RepositoryNameNotFoundException, CommitWithNameNotFoundException,
+      throws RepositoryNameNotFoundException,
+          CommitWithNameNotFoundException,
           PullRunWithNameNotFoundException {
     commitService.associateCommitToPullRun(
         commitToPullRunBody.getRepositoryId(),

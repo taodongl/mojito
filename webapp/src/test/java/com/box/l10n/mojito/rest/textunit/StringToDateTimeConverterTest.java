@@ -5,7 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.joda.time.DateTime;
 import org.junit.Test;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 public class StringToDateTimeConverterTest {
 
   @Test

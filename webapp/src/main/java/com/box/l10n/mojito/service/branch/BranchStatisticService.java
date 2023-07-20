@@ -29,6 +29,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
+import jakarta.persistence.EntityManager;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +41,6 @@ import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import jakarta.persistence.EntityManager;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -50,6 +50,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class BranchStatisticService {
 
   public static final int BATCH_SIZE_UPDATE_BRANCH_TEXT_UNIT_STATISTICS = 1000;
+
   /** logger */
   static Logger logger = getLogger(BranchStatisticService.class);
 
@@ -129,8 +130,11 @@ public class BranchStatisticService {
                                 lastSuccessfulAssetExtraction.getId(),
                                 lastSuccessfulAssetExtraction.getVersion());
 
-                        return lastSuccessfulAssetExtraction.getAsset().getRepository()
-                            .getRepositoryLocales().stream()
+                        return lastSuccessfulAssetExtraction
+                            .getAsset()
+                            .getRepository()
+                            .getRepositoryLocales()
+                            .stream()
                             .filter(
                                 rl -> rl.getParentLocale() != null && rl.isToBeFullyTranslated())
                             .flatMap(
@@ -165,7 +169,8 @@ public class BranchStatisticService {
                             .stream()
                             .flatMap(
                                 longForTranslationCountForTmTextUnitIdImmutableMap ->
-                                    longForTranslationCountForTmTextUnitIdImmutableMap.values()
+                                    longForTranslationCountForTmTextUnitIdImmutableMap
+                                        .values()
                                         .stream());
                       })
                   .collect(toMapBranchNameToTranslationCountForTextUnitId());

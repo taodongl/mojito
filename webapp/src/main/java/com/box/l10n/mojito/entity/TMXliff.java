@@ -9,7 +9,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
-/** @author jyi */
+/**
+ * @author jyi
+ */
 @Entity
 @Table(name = "tm_xliff")
 public class TMXliff extends AuditableEntity {

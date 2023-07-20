@@ -18,9 +18,9 @@ import com.box.l10n.mojito.service.pullrun.PullRunRepository;
 import com.box.l10n.mojito.service.pushrun.PushRunRepository;
 import com.box.l10n.mojito.service.repository.RepositoryRepository;
 import com.box.l10n.mojito.service.tm.TextUnitVariantDeltaDTO;
+import jakarta.persistence.EntityManager;
 import java.util.Collections;
 import java.util.List;
-import jakarta.persistence.EntityManager;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/** @author garion */
+/**
+ * @author garion
+ */
 @RestController
 public class DeltaWS {
 

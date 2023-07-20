@@ -8,7 +8,9 @@ import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 public class AssetTextUnitSpecification {
 
   public static SingleParamSpecification<AssetTextUnit> assetExtractionIdEquals(

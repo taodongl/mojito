@@ -8,7 +8,9 @@ import com.github.pnowy.nc.core.CriteriaResult;
 import com.github.pnowy.nc.core.mappers.NativeObjectMapper;
 import org.joda.time.DateTime;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 public class TextUnitDTONativeObjectMapper implements NativeObjectMapper<TextUnitDTO> {
 
   @Override

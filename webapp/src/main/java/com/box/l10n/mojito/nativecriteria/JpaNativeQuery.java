@@ -2,13 +2,15 @@ package com.box.l10n.mojito.nativecriteria;
 
 import com.github.pnowy.nc.core.NativeQuery;
 import com.github.pnowy.nc.core.QueryInfo;
-import java.util.Collection;
-import java.util.List;
 import jakarta.persistence.Query;
 import jakarta.persistence.TemporalType;
+import java.util.Collection;
+import java.util.List;
 import org.joda.time.DateTime;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 public class JpaNativeQuery implements NativeQuery {
 
   Query query;

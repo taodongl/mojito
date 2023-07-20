@@ -64,6 +64,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.ibm.icu.text.MessageFormat;
 import io.micrometer.core.annotation.Timed;
+import jakarta.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -77,7 +78,6 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import jakarta.persistence.EntityManager;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
@@ -1138,7 +1138,8 @@ public class AssetExtractionService {
       FilterConfigIdOverride filterConfigIdOverride,
       List<String> filterOptions,
       Long parentTaskId)
-      throws UnsupportedAssetFilterTypeException, InterruptedException,
+      throws UnsupportedAssetFilterTypeException,
+          InterruptedException,
           AssetExtractionConflictException {
 
     ProcessAssetJobInput processAssetJobInput = new ProcessAssetJobInput();

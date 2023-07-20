@@ -155,7 +155,8 @@ public class CommitService {
    * commit names provided.
    */
   public Optional<Commit> getLastPushedCommit(List<String> commitNames, Long repositoryId) {
-    return commitRepository.findLatestPushedCommits(commitNames, repositoryId, PageRequest.of(0, 1))
+    return commitRepository
+        .findLatestPushedCommits(commitNames, repositoryId, PageRequest.of(0, 1))
         .stream()
         .findFirst();
   }
@@ -166,7 +167,8 @@ public class CommitService {
    */
   public Optional<PushRun> getLastPushRun(List<String> commitNames, Long repositoryId) {
     return pushRunRepository
-        .findLatestByCommitNames(commitNames, repositoryId, PageRequest.of(0, 1)).stream()
+        .findLatestByCommitNames(commitNames, repositoryId, PageRequest.of(0, 1))
+        .stream()
         .findFirst();
   }
 
@@ -175,7 +177,8 @@ public class CommitService {
    * commit names provided.
    */
   public Optional<Commit> getLastPulledCommit(List<String> commitNames, Long repositoryId) {
-    return commitRepository.findLatestPulledCommits(commitNames, repositoryId, PageRequest.of(0, 1))
+    return commitRepository
+        .findLatestPulledCommits(commitNames, repositoryId, PageRequest.of(0, 1))
         .stream()
         .findFirst();
   }
@@ -186,7 +189,8 @@ public class CommitService {
    */
   public Optional<PullRun> getLastPullRun(List<String> commitNames, Long repositoryId) {
     return pullRunRepository
-        .findLatestByCommitNames(commitNames, repositoryId, PageRequest.of(0, 1)).stream()
+        .findLatestByCommitNames(commitNames, repositoryId, PageRequest.of(0, 1))
+        .stream()
         .findFirst();
   }
 
@@ -205,7 +209,8 @@ public class CommitService {
   /** See {@link CommitService#associateCommitToPushRun(Commit, PushRun)}. */
   @Transactional
   public void associateCommitToPushRun(Long repositoryId, String commitName, String pushRunName)
-      throws CommitWithNameNotFoundException, RepositoryWithIdNotFoundException,
+      throws CommitWithNameNotFoundException,
+          RepositoryWithIdNotFoundException,
           PushRunWithNameNotFoundException {
     Commit commit =
         commitRepository

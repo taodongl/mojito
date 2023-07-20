@@ -15,7 +15,9 @@ import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.joda.time.DateTime;
 
-/** @author jeanaurambault */
+/**
+ * @author jeanaurambault
+ */
 public class BranchStatisticSpecification {
 
   public static SingleParamSpecification<BranchStatistic> branchEquals(final Long branchId) {

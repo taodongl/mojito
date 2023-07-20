@@ -1,10 +1,10 @@
 package com.box.l10n.mojito.rest.cli;
 
 import com.box.l10n.mojito.service.cli.CliService;
-import java.io.IOException;
-import java.util.Optional;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 @RestController
 public class CliWS {
 

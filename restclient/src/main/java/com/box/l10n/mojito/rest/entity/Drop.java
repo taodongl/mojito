@@ -2,7 +2,9 @@ package com.box.l10n.mojito.rest.entity;
 
 import org.joda.time.DateTime;
 
-/** @author jaurambault */
+/**
+ * @author jaurambault
+ */
 public class Drop {
 
   Long id;
