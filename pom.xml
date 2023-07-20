@@ -66,13 +66,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- TODO(spring2) remove -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-properties-migrator</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
     </dependencies>
 
     <!-- SCM setup to push changes to the Github repo on release -->
