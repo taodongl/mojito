@@ -1,5 +1,6 @@
 package com.box.l10n.mojito.entity;
 
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import com.box.l10n.mojito.entity.security.user.User;
 import com.box.l10n.mojito.rest.View;
 import com.box.l10n.mojito.service.drop.exporter.DropExporterType;
@@ -17,6 +18,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.JavaType;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 import org.springframework.data.annotation.CreatedBy;
@@ -72,7 +74,7 @@ public class Drop extends AuditableEntity {
    * the status only in one place
    */
   @Column(name = "last_imported_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   @JsonView(View.DropSummary.class)
   protected DateTime lastImportedDate;
 

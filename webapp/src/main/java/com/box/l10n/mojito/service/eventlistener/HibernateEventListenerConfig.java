@@ -1,6 +1,6 @@
 package com.box.l10n.mojito.service.eventlistener;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnit;
 import org.hibernate.event.service.spi.EventListenerRegistry;

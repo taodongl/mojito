@@ -1,6 +1,7 @@
 package com.box.l10n.mojito.entity;
 
 import com.box.l10n.mojito.aspect.JsonRawString;
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import com.box.l10n.mojito.entity.security.user.User;
 import com.box.l10n.mojito.rest.View;
 import com.box.l10n.mojito.service.pollableTask.InjectCurrentTask;
@@ -23,6 +24,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.JavaType;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 import org.springframework.data.annotation.CreatedBy;
@@ -50,7 +52,7 @@ public class PollableTask extends AuditableEntity {
   private String name;
 
   @Column(name = "finished_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime finishedDate;
 
   @JsonIgnore

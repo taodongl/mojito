@@ -1,5 +1,6 @@
 package com.box.l10n.mojito.entity;
 
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
@@ -7,6 +8,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.JavaType;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
@@ -33,7 +35,7 @@ public class StatisticsSchedule extends BaseEntity {
   private Repository repository;
 
   @Column(name = "time_to_update")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   protected DateTime timeToUpdate;
 
   public Repository getRepository() {

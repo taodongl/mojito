@@ -1,14 +1,9 @@
 package com.box.l10n.mojito.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ForeignKey;
-import jakarta.persistence.Index;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
+import jakarta.persistence.*;
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.JavaType;
 import org.joda.time.DateTime;
 
 /** @author garion */
@@ -37,7 +32,7 @@ public class TMTextUnitStatistic extends AuditableEntity {
   private Double lastPeriodUsageCount = 0d;
 
   @Column(name = "last_seen_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime lastSeenDate;
 
   public TMTextUnit getTMTextUnit() {

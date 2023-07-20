@@ -1,20 +1,14 @@
 package com.box.l10n.mojito.entity;
 
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import com.box.l10n.mojito.rest.View;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ForeignKey;
-import jakarta.persistence.Index;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.JavaType;
 import org.joda.time.DateTime;
 
 /** @author garion */
@@ -66,7 +60,7 @@ public class Commit extends AuditableEntity {
    */
   @JsonView(View.Commit.class)
   @Column(name = "source_creation_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime sourceCreationDate;
 
   @JsonView(View.CommitDetailed.class)

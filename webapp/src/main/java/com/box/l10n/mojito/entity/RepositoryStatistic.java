@@ -1,24 +1,19 @@
 package com.box.l10n.mojito.entity;
 
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import com.box.l10n.mojito.entity.security.user.User;
 import com.box.l10n.mojito.rest.View;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
-import java.util.HashSet;
-import java.util.Set;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ForeignKey;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OrderBy;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.JavaType;
 import org.joda.time.DateTime;
 import org.springframework.data.annotation.CreatedBy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Entity that contains statistics (word count, translated count, etc) of a {@link Repository}
@@ -61,7 +56,7 @@ public class RepositoryStatistic extends AuditableEntity {
   private Long ooslaTextUnitWordCount = 0L;
 
   @JsonView(View.RepositorySummary.class)
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime ooslaCreatedBefore;
 
   /** The number of text unit without comments */

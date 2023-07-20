@@ -1,6 +1,8 @@
 package com.box.l10n.mojito.entity;
 
 import java.util.Set;
+
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -9,6 +11,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.JavaType;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
@@ -18,7 +21,7 @@ import org.joda.time.DateTime;
 public class SlaIncident extends AuditableEntity {
 
   @Column(name = "closed_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime closedDate;
 
   @ManyToMany(fetch = FetchType.EAGER)

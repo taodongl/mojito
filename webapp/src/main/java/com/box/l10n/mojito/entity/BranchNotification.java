@@ -1,5 +1,6 @@
 package com.box.l10n.mojito.entity;
 
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
 import com.box.l10n.mojito.rest.View;
 import com.fasterxml.jackson.annotation.JsonView;
 import jakarta.persistence.Column;
@@ -9,6 +10,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.JavaType;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
@@ -32,19 +34,19 @@ public class BranchNotification extends BaseEntity {
   private Branch branch;
 
   @Column(name = "new_msg_sent_at")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   DateTime newMsgSentAt;
 
   @Column(name = "updated_msg_sent_at")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   DateTime updatedMsgSentAt;
 
   @Column(name = "screenshot_missing_msg_sent_at")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   DateTime screenshotMissingMsgSentAt;
 
   @Column(name = "translated_msg_sent_at")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   DateTime translatedMsgSentAt;
 
   @Column(name = "content_md5")

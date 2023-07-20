@@ -1,15 +1,9 @@
 package com.box.l10n.mojito.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ForeignKey;
-import jakarta.persistence.Index;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Lob;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import com.box.l10n.mojito.converter.JodaDateTimeJavaType;
+import jakarta.persistence.*;
 import org.hibernate.annotations.BatchSize;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.JavaType;
 import org.joda.time.DateTime;
 
 /**
@@ -46,11 +40,11 @@ public class ApplicationCache extends BaseEntity {
   private byte[] value;
 
   @Column(name = "created_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime createdDate;
 
   @Column(name = "expiry_date")
-  @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
+  @JavaType(JodaDateTimeJavaType.class)
   private DateTime expiryDate;
 
   public ApplicationCache() {}
